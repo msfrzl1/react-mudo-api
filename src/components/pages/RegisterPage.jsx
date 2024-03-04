@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
-import FormInput from "../Elements/FormInput";
 import Navbar from "../Fragments/Navbar";
+import Label from "../Elements/Label";
+import Input from "../Elements/Input";
 
 const RegisterPage = () => {
   return (
@@ -10,8 +11,12 @@ const RegisterPage = () => {
       <div className="min-h-screen bg-gray-100 flex flex-col justify-center sm:px-6 sm:px-8">
         <div className="sm: mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <FormInput label="Username" type="text" name="username" placeholder="mxxxx123" />
-            <FormInput label="Password" type="password" name="password" placeholder="*******" />
+            <form action="">
+              <Label htmlFor="username">Username</Label>
+              <Input type="text" name="username" placeholder="mxxxx123" />
+              <Label htmlFor="password">Password</Label>
+              <Input type="password" name="password" placeholder="********" />
+            </form>
 
             <div className="flex justify-center mt-1">
               <p>
