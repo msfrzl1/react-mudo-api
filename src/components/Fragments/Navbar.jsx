@@ -7,7 +7,7 @@ const Navbar = () => {
   const listNavbar = [
     { to: "/home", element: "Home" },
     { to: "/menu", element: "Menu" },
-    { to: "/login", element: "Login" },
+    { to: "/login", element: "Login/Registration" },
   ];
 
   return (
