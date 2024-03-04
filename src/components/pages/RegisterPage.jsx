@@ -12,6 +12,9 @@ const RegisterPage = () => {
         <div className="sm: mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form action="">
+              <div className="flex justify-center font-black text-5xl mb-6">
+                <h1>Register</h1>
+              </div>
               <Label htmlFor="username">Username</Label>
               <Input type="text" name="username" placeholder="mxxxx123" />
               <Label htmlFor="password">Password</Label>

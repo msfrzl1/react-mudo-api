@@ -44,6 +44,9 @@ const LoginPage = () => {
         <div className="sm: mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form action="">
+              <div className="flex justify-center font-black text-5xl mb-6">
+                <h1>Login</h1>
+              </div>
               <Label htmlFor="username">Username</Label>
               <Input type="text" name="username" placeholder="mxxxx123" onChange={handleUsername} />
               <Label htmlFor="password">Password</Label>
@@ -68,7 +71,9 @@ const LoginPage = () => {
                 Login
               </button>
               {notif.message && (
-                <p className={notif.success ? "text-green-500 flex justify-center mt-2" : "text-red-500 flex justify-center mt-2"}>{notif.message}</p>
+                <div className={notif.success ? "text-green-500 flex justify-center mt-2" : "text-red-500 flex justify-center mt-2"}>
+                  <p>{notif.message}</p>
+                </div>
               )}
             </div>
           </div>
