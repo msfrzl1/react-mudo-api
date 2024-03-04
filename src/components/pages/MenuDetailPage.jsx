@@ -1,7 +1,9 @@
+import Navbar from "../Fragments/Navbar";
+
 const MenuDetailPage = () => {
   return (
     <div>
-      <h1>Menu Detail Page</h1>
+      <Navbar />
     </div>
   );
 };

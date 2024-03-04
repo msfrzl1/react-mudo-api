@@ -1,7 +1,9 @@
+import Navbar from "../Fragments/Navbar";
+
 const MenuPage = () => {
   return (
     <div>
-      <h1>Menu page</h1>
+      <Navbar />
     </div>
   );
 };

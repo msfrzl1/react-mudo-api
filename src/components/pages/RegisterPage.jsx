@@ -1,7 +1,9 @@
+import Navbar from "../Fragments/Navbar";
+
 const RegisterPage = () => {
   return (
     <div>
-      <h1>Register Page</h1>
+      <Navbar />
     </div>
   );
 };
