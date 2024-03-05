@@ -1,14 +1,21 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const listNavbar = [
     { to: "/home", element: "Home" },
     { to: "/menu", element: "Menu" },
-    { to: "/login", element: "Login/Registration" },
   ];
+
+  const token = localStorage.getItem("access_token");
+
+  const logout = () => {
+    localStorage.removeItem("access_token");
+    navigate("/login");
+  };
 
   return (
     <div className="bg-gray-900 py-4">
@@ -26,6 +33,17 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                {token ? (
+                  <Link to={"/home"} className="hover:text-gray-300" onClick={logout}>
+                    Logout
+                  </Link>
+                ) : (
+                  <Link to={"/login"} className="hover:text-gray-300">
+                    Login
+                  </Link>
+                )}
+              </li>
             </ul>
           </div>
 

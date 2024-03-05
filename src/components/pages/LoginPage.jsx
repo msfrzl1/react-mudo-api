@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Fragments/Navbar";
 import { useState } from "react";
 import Label from "../Elements/Label";
@@ -10,6 +10,7 @@ const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [notif, setNotif] = useState("");
+  const navigate = useNavigate();
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
@@ -29,8 +30,11 @@ const LoginPage = () => {
       .post("https://api.mudoapi.tech/login", payload)
       .then((res) => {
         const token = res.data.data.token;
-        localStorage.setItem("access", token);
+        localStorage.setItem("access_token", token);
         setNotif({ message: res.data.message, success: true });
+        setTimeout(() => {
+          navigate("/menu");
+        }, 2000);
       })
       .catch((error) => {
         setNotif({ message: error.response.data.message, success: false });
