@@ -8,6 +8,7 @@ const Navbar = () => {
   const listNavbar = [
     { to: "/home", element: "Home" },
     { to: "/menu", element: "Menu" },
+    { to: "/add-menu", element: "Add Menu" },
   ];
 
   const token = localStorage.getItem("access_token");

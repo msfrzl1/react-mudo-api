@@ -1,3 +1,4 @@
+import AddMenu from "../pages/AddMenu";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import MenuDetailPage from "../pages/MenuDetailPage";
@@ -27,6 +28,14 @@ export const routeList = [
     element: (
       <ProtectedRoute>
         <MenuDetailPage />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/add-menu",
+    element: (
+      <ProtectedRoute>
+        <AddMenu />
       </ProtectedRoute>
     ),
   },
