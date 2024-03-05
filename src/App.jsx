@@ -14,7 +14,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/menu" element={<MenuPage />} />
-        <Route path="/menu-detail" element={<MenuDetailPage />} />
+        <Route path="/menu/:id" element={<MenuDetailPage />} />
       </Routes>
     </BrowserRouter>
   );
